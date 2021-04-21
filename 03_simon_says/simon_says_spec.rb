@@ -84,12 +84,20 @@ describe "Simon says" do
       expect(titleize("david copperfield")).to eq("David Copperfield")
     end
 
+    it "capitalizes every word (aka title case)" do
+      expect(titleize("edgar allan poe")).to eq("Edgar Allan Poe")
+    end
+
     it "doesn't capitalize 'little words' in a title" do
       expect(titleize("war and peace")).to eq("War and Peace")
     end
 
+    it "doesn't capitalize 'little words' in a title" do
+      expect(titleize("i am and she is not")).to eq("I Am and She Is Not")
+    end
+
     it "does capitalize 'little words' at the start of a title" do
-      expect(titleize("the bridge over the river kwai")).to eq("The Bridge over the River Kwai")
+      expect(titleize("the bridge over the river kwai")).to eq("The Bridge Over the River Kwai")
     end
   end
 

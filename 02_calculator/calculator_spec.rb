@@ -79,21 +79,68 @@ end
 
 describe "#multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies two 0's" do
+    expect(multiply(0,0)).to eq(0)
+  end
 
-  it "multiplies several numbers"
-  
+  it "multiplies a negative number with 0" do
+    expect(multiply(-18,0)).to eq(0)
+  end
+
+  it "multiplies two numbers" do
+    expect(multiply(3,6)).to eq(18)
+  end
+
+  it "multiplies many numbers" do
+    expect(multiply(3,6,8,12)).to eq(1728)
+  end
+
+  it "multiplies a negative number with a positive number" do
+    expect(multiply(-2,9)).to eq(-18)
+  end
+
+  it "multiplies two negative numbers" do
+    expect(multiply(-7,-4)).to eq(28)
+  end
+
+  it "multiplies three negative numbers" do
+    expect(multiply(-5,-5,-5)).to eq(-125)
+  end
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises one number to the power of another number" do
+    expect(power(2,3)).to eq(8)
+  end
+
+  it "raises a negative number to the power of another number" do
+    expect(power(-2,3)).to eq(-8)
+  end
+
+  it "raises 0 to the power of another number" do
+    expect(power(0,5)).to eq(0)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
 end
